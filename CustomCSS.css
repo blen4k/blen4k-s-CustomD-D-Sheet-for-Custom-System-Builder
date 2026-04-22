@@ -1,0 +1,339 @@
+  /* - Данный Css код я рекомендую добовлять через Foundry Custom CSS так как будет легче редактировать элементы  - */
+  /* - Без стилей CSB делает листы слишком широкими и неудобными - */
+
+:root {
+  /* Это основная палитра для системы*/
+  --coal: #0f0f14;           /* угольный с фиолетовым подтоном */
+  --dark-slate: #181a24;     /* тёмный индиго */
+  --charcoal: #1e1f2a;       /* серо-фиолетовый */
+  --steel-blue: #2a2a3e;     /* глубокий пурпурно-синий */
+  --muted-blue: #3d3b5c;     /* приглушённый лавандовый */
+  --cyan-glow: #b77dff;      /* яркое лавандово-фиолетовое свечение */
+  --ice-blue: #d4b8ff;       /* светлый сиреневый для текста */
+  --text-light: #f2eaff;     /* очень светлый с фиолетовым отливом */
+  --text-dim: #bfb0dc;       /* призрачно-фиолетовый */
+  --border-dim: #2e2a3e;     /* едва заметная рамка */
+}
+
+/* - Базовое оформление - */
+.sheet.custom-system.actor.theme-dark,
+.custom-system-entity {
+  background: var(--coal);
+  color: var(--text-light);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* - Шапка листа - */
+.sheet-header {
+  background: var(--dark-slate);
+  border-bottom: none;
+  padding: 2px 4px;
+  margin-bottom: 1px;
+  gap: 4px;
+}
+
+.profile-img-container {
+  border-radius: 4px;
+  border: none;
+}
+
+.charname input {
+  font-size: 1.4rem;
+  background: var(--charcoal);
+  border: none;
+  color: var(--text-light);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+/* - Панели и контейнеры - */
+.custom-system-panel {
+  background: rgba(26, 28, 40, 0.85);
+  border-radius: 4px;
+  border: none;
+  padding: 1px 3px;
+  margin-bottom: 1px;
+}
+
+.grid {
+  gap: 1px;
+}
+.flexcol, .flexrow {
+  gap: 1px;
+}
+
+/* - Заголовки - */
+.custom-system-label h4,
+.custom-system-label h5,
+.custom-system-label h6 {
+  margin: 0 0 1px 0;
+  font-weight: 600;
+  color: var(--ice-blue);
+  font-size: 1rem;
+  text-shadow: 0 0 2px rgba(183, 125, 255, 0.3);
+}
+.custom-system-label h4 {
+  border-left: 2px solid var(--cyan-glow);
+  padding-left: 5px;
+}
+
+/* - Поля ввода, select - */
+input, select, textarea {
+  background: var(--charcoal);
+  border: none;
+  color: var(--text-light);
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 14px;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 1px solid var(--cyan-glow);
+  box-shadow: 0 0 4px var(--cyan-glow);
+}
+
+/* - Чекбоксы - */
+input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  accent-color: var(--cyan-glow);
+}
+.custom-system-cell input[type="checkbox"],
+td input[type="checkbox"] {
+  margin: 0 auto;
+  display: block;
+}
+.flex-group-center input[type="checkbox"] {
+  margin: 0;
+}
+
+/* - КНОПКИ И ССЫЛКИ ФИГОВО РАБОТАЕЮТ - */
+button, .button, .custom-system-rollable,
+a.content-link, a.entity-link,
+.custom-system-rollable span,
+.custom-system-label a,
+td a,
+.custom-system-cell a,
+a[data-type="Item"],
+.custom-system-addDynamicLine {
+  background: var(--steel-blue);
+  border: none;
+  color: var(--text-light) !important;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+}
+button:hover, .button:hover, .custom-system-rollable:hover,
+a.content-link:hover {
+  background: var(--cyan-glow) !important;
+  color: var(--coal) !important;
+  box-shadow: 0 0 6px var(--cyan-glow);
+}
+
+/* Иконки (корзина, сортировка) */
+.custom-system-dynamic-table-row-icons a,
+.custom-system-deleteDynamicLine,
+.custom-system-sortUpDynamicLine,
+.custom-system-sortDownDynamicLine {
+  background: transparent !important;
+  color: var(--ice-blue) !important;
+  padding: 0 2px;
+  font-size: 12px;
+}
+.custom-system-dynamic-table-row-icons a:hover {
+  color: var(--cyan-glow) !important;
+  filter: drop-shadow(0 0 2px var(--cyan-glow));
+}
+
+/* Ссылки на предметы (без фона) */
+.content-link, .entity-link, a.content-link {
+  background: transparent !important;
+  color: var(--ice-blue) !important;
+  border-bottom: 1px dotted var(--muted-blue);
+  padding: 0 2px;
+}
+.content-link:hover, .entity-link:hover {
+  background: var(--muted-blue) !important;
+  color: white !important;
+  border-bottom-color: var(--cyan-glow);
+}
+
+/* ----- Числовые поля ----- */
+.custom-system-number-field input {
+  width: 42px;
+  text-align: center;
+  padding: 1px 2px;
+  font-size: 14px;
+}
+
+/* - Полоска здоровья (духовная энергия) - */
+.custom-system-meter {
+  background: var(--charcoal);
+  border-radius: 10px;
+  height: 16px;
+  border: none;
+  margin: 1px 0;
+}
+.custom-system-meter-fill {
+  background: linear-gradient(90deg, var(--cyan-glow), #e0b0ff);
+}
+.custom-system-meter-content {
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--coal);
+  font-weight: bold;
+  text-shadow: 0 0 1px white;
+}
+
+/* - Таблицы - */
+.custom-system-dynamic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.custom-system-cell {
+  padding: 1px 2px;
+  border-bottom: none;
+  vertical-align: middle;
+}
+.custom-system-cell-boldTitle {
+  background: var(--dark-slate);
+  color: var(--ice-blue);
+}
+
+/* - Вкладки - */
+.custom-tabs {
+  display: flex;
+  gap: 1px;
+  background: transparent;
+  padding: 1px 1px 0 1px;
+  margin-bottom: 1px;
+}
+.custom-tabs span a {
+  padding: 2px 6px;
+  background: var(--charcoal);
+  border-radius: 4px 4px 0 0;
+  color: var(--text-dim);
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+}
+.custom-tabs span a.active {
+  background: var(--steel-blue);
+  color: var(--text-light);
+  border-bottom: 2px solid var(--cyan-glow);
+  text-shadow: 0 0 2px var(--cyan-glow);
+}
+
+/* - Сворачиваемые блоки - */
+details {
+  background: rgba(18, 18, 28, 0.6);
+  border-radius: 4px;
+  padding: 1px 2px;
+  margin-bottom: 1px;
+  border: none;
+}
+details summary {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--ice-blue);
+}
+details hr {
+  margin: 1px 0;
+  display: none;
+}
+
+/* - Кнопка добавления строки -*/
+.custom-system-addDynamicLine {
+  display: inline-block;
+  margin: 1px 0;
+  padding: 1px 4px;
+  background: var(--steel-blue);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* - Скролл - */
+.window-content::-webkit-scrollbar {
+  width: 4px;
+  background: var(--charcoal);
+}
+.window-content::-webkit-scrollbar-thumb {
+  background: var(--muted-blue);
+  border-radius: 4px;
+}
+
+/* - Метки - */
+.custom-system-field label {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: var(--text-dim);
+  margin-bottom: 1px;
+}
+
+/* - Отступы в хедере - */
+.sheet-header .header-fields > div {
+  margin-bottom: 1px;
+}
+
+/* - Убираем все лишние рамки и тени - */
+.window-content,
+.custom-system-component-contents,
+.custom-system-panel,
+.custom-system-field,
+.custom-system-meter,
+button,
+input,
+select,
+textarea {
+  box-shadow: none;
+  outline: none;
+}
+
+/* - Это внутренние стили для системы ЧАТ, Кастомная обводка и кубы - */
+.mod_panel {
+  border: 1px solid var(--muted-blue);
+  border-radius: var(--border-radius, 6px);
+  padding: 2px;
+}
+
+.custom-system-rollable, .custom-system-rollable > * {
+  color: #e6d5ff;
+}
+
+.chat-message {
+  color: #e6d5ff;
+  background: #1a1625;
+}
+.chat-message .message-header {
+  color: #d4b8ff;
+}
+.custom-system-roll {
+  background: #1a162d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #e6d5ff;
+  margin: 0 0 2px 0;
+  font-size: 1.1rem;
+}
+
+.custom-system-entity nav.custom-tabs {
+  margin: 2px 0;
+  border-top: 1px solid #2e2a3e;
+  border-bottom: 2px solid #4a3a6a;
+}
+
+.red_text {
+  color: #FF8855;   /* мягкий красный для духовного мира */
+}
+.Green_text {
+  color: #88ffaa;
+}
