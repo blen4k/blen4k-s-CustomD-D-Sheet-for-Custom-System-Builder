@@ -1,4 +1,4 @@
-# Blen4k`s Sheet Custom System Builder Foundry VTT - База для гибкого листа персонажа и системы в целом для сильно модифицированной D&D 5e.
+<img width="297" height="42" alt="image" src="https://github.com/user-attachments/assets/22bce53f-44e5-4535-9e53-3ed3f7ee2759" /># Blen4k`s Sheet Custom System Builder Foundry VTT - База для гибкого листа персонажа и системы в целом для сильно модифицированной D&D 5e.
 Долгое время я искал удобный и гибкий лист персонажа для игры в **Dungeons & Dragons 5 редакции** на Foundry VTT, но ничего подходящего не нашёл.
 Поэтому я решил создать свой собственный лист с помощью **Custom System Builder**.  
 
@@ -20,4 +20,13 @@
 Если ты тоже играешь по сильно изменённой D&D 5e и тебе нужна максимальная гибкость в настройке листа персонажа этот шаблон может тебе пригодиться.
 Можешь свободно форкать, копировать и адаптировать под свои нужды, и буду рад если поделишься своими успехами для улучшения данного шаблона.
 
-### Со мной можно связаться в Discord: blen4k (309702926417264651) или blen4k в Телеграмм 
+Со мной можно связаться в Discord: blen4k (309702926417264651) или blen4k в Телеграмм 
+
+#Добавить в Custom System Builder
+
+###Json файл добовляется в Custom System Builder
+<img width="320" height="211" alt="image" src="https://github.com/user-attachments/assets/401491ed-5caf-4875-b2dc-291b1f9a72f8" />
+###Css стиль можно добавить в настройках Custom System Builder но рекомендую модуль CustomCss
+<img width="531" height="135" alt="image" src="https://github.com/user-attachments/assets/eec83301-4d17-43bf-81e9-dce4f8a37913" />
+
+
