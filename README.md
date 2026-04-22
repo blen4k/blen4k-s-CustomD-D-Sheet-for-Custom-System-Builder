@@ -22,11 +22,11 @@
 
 Со мной можно связаться в Discord: blen4k (309702926417264651) или blen4k в Телеграмм 
 
-#Добавить в Custom System Builder
+# Добавить в Custom System Builder
 
-###Json файл добовляется в Custom System Builder
+### Json файл добовляется в Custom System Builder
 <img width="320" height="211" alt="image" src="https://github.com/user-attachments/assets/401491ed-5caf-4875-b2dc-291b1f9a72f8" />
-###Css стиль можно добавить в настройках Custom System Builder но рекомендую модуль CustomCss
+### Css стиль можно добавить в настройках Custom System Builder но рекомендую модуль CustomCss
 <img width="531" height="135" alt="image" src="https://github.com/user-attachments/assets/eec83301-4d17-43bf-81e9-dce4f8a37913" />
 
 
